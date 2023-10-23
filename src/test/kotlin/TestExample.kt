@@ -40,14 +40,14 @@ class TestExample {
 
         @JvmStatic
         @BeforeAll
-        fun launchBrowser(): Unit {
+        fun launchBrowser() {
             playwright = Playwright.create()
             browser = playwright!!.chromium().launch(BrowserType.LaunchOptions().setHeadless(false))
         }
 
         @JvmStatic
         @AfterAll
-        fun closeBrowser(): Unit {
+        fun closeBrowser() {
             playwright!!.close()
         }
     }
